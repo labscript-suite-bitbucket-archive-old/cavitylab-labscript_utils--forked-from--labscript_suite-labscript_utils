@@ -26,7 +26,7 @@ class LessThanFilter(logging.Filter):
         return record.levelno < self.less_than
 
 
-def setup_logging(program_name, log_level=logging.CRITICAL, terminal_level=logging.CRITICAL, maxBytes=1024*1024*50, backupCount=1):
+def setup_logging(program_name, log_level=logging.CRITICAL, terminal_level=logging.INFO, maxBytes=1024*1024*50, backupCount=1):
     logger = logging.getLogger(program_name)
     # Clear any previously added handlers from the logger:
     for handler in logger.handlers[:]:
